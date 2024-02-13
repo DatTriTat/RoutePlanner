@@ -11,7 +11,7 @@ import SwiftUI
 struct RoutePlannerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RoutePlannerView()
         }
     }
 }
