@@ -8,27 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		B41536CD2B755C34008191FA /* RoutePlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41536CC2B755C34008191FA /* RoutePlannerApp.swift */; };
-		B41536CF2B755C34008191FA /* RoutePlannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41536CE2B755C34008191FA /* RoutePlannerView.swift */; };
+		B41536CF2B755C34008191FA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41536CE2B755C34008191FA /* HomeView.swift */; };
 		B41536D12B755C36008191FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B41536D02B755C36008191FA /* Assets.xcassets */; };
 		B41536D42B755C36008191FA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B41536D32B755C36008191FA /* Preview Assets.xcassets */; };
-		B41536ED2B783E47008191FA /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41536EC2B783E47008191FA /* SideMenuView.swift */; };
-		B41536EF2B783F2F008191FA /* SideMenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41536EE2B783F2F008191FA /* SideMenuHeaderView.swift */; };
-		B41536F12B784322008191FA /* SideMenuRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41536F02B784322008191FA /* SideMenuRowView.swift */; };
-		B41536F32B78442D008191FA /* SideMenuOptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41536F22B78442D008191FA /* SideMenuOptionModel.swift */; };
-		B41536F52B784C2E008191FA /* LogoutSideMenuRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41536F42B784C2E008191FA /* LogoutSideMenuRowView.swift */; };
+		B4A549E02B7E9ED7008CB046 /* TripsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A549DF2B7E9ED7008CB046 /* TripsView.swift */; };
+		B4A549E22B7E9F24008CB046 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A549E12B7E9F24008CB046 /* NotificationsView.swift */; };
+		B4A549E42B7E9F4D008CB046 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A549E32B7E9F4D008CB046 /* ProfileView.swift */; };
+		B4A549E62B7E9FC8008CB046 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A549E52B7E9FC8008CB046 /* RootView.swift */; };
+		B4A549EA2B7F08CA008CB046 /* NewTripFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A549E92B7F08CA008CB046 /* NewTripFormView.swift */; };
+		B4A549EC2B7F2B00008CB046 /* SearchMapsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A549EB2B7F2B00008CB046 /* SearchMapsView.swift */; };
+		B4A549EE2B803CA8008CB046 /* TripDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A549ED2B803CA8008CB046 /* TripDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B41536C92B755C34008191FA /* RoutePlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoutePlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B41536CC2B755C34008191FA /* RoutePlannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePlannerApp.swift; sourceTree = "<group>"; };
-		B41536CE2B755C34008191FA /* RoutePlannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePlannerView.swift; sourceTree = "<group>"; };
+		B41536CE2B755C34008191FA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		B41536D02B755C36008191FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B41536D32B755C36008191FA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B41536EC2B783E47008191FA /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
-		B41536EE2B783F2F008191FA /* SideMenuHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuHeaderView.swift; sourceTree = "<group>"; };
-		B41536F02B784322008191FA /* SideMenuRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuRowView.swift; sourceTree = "<group>"; };
-		B41536F22B78442D008191FA /* SideMenuOptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuOptionModel.swift; sourceTree = "<group>"; };
-		B41536F42B784C2E008191FA /* LogoutSideMenuRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutSideMenuRowView.swift; sourceTree = "<group>"; };
+		B4A549DF2B7E9ED7008CB046 /* TripsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsView.swift; sourceTree = "<group>"; };
+		B4A549E12B7E9F24008CB046 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
+		B4A549E32B7E9F4D008CB046 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		B4A549E52B7E9FC8008CB046 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		B4A549E92B7F08CA008CB046 /* NewTripFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTripFormView.swift; sourceTree = "<group>"; };
+		B4A549EB2B7F2B00008CB046 /* SearchMapsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMapsView.swift; sourceTree = "<group>"; };
+		B4A549ED2B803CA8008CB046 /* TripDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,15 +65,14 @@
 		B41536CB2B755C34008191FA /* RoutePlanner */ = {
 			isa = PBXGroup;
 			children = (
+				B4A549F32B8047A8008CB046 /* Root */,
+				B4A549F22B804790008CB046 /* Trips */,
+				B4A549F12B80477E008CB046 /* Notifications */,
+				B4A549F02B804770008CB046 /* Profile */,
+				B4A549EF2B804764008CB046 /* Home */,
 				B41536CC2B755C34008191FA /* RoutePlannerApp.swift */,
-				B41536CE2B755C34008191FA /* RoutePlannerView.swift */,
 				B41536D02B755C36008191FA /* Assets.xcassets */,
 				B41536D22B755C36008191FA /* Preview Content */,
-				B41536EC2B783E47008191FA /* SideMenuView.swift */,
-				B41536EE2B783F2F008191FA /* SideMenuHeaderView.swift */,
-				B41536F02B784322008191FA /* SideMenuRowView.swift */,
-				B41536F22B78442D008191FA /* SideMenuOptionModel.swift */,
-				B41536F42B784C2E008191FA /* LogoutSideMenuRowView.swift */,
 			);
 			path = RoutePlanner;
 			sourceTree = "<group>";
@@ -80,6 +83,49 @@
 				B41536D32B755C36008191FA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B4A549EF2B804764008CB046 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B41536CE2B755C34008191FA /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B4A549F02B804770008CB046 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				B4A549E32B7E9F4D008CB046 /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		B4A549F12B80477E008CB046 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				B4A549E12B7E9F24008CB046 /* NotificationsView.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		B4A549F22B804790008CB046 /* Trips */ = {
+			isa = PBXGroup;
+			children = (
+				B4A549EB2B7F2B00008CB046 /* SearchMapsView.swift */,
+				B4A549DF2B7E9ED7008CB046 /* TripsView.swift */,
+				B4A549ED2B803CA8008CB046 /* TripDetailView.swift */,
+				B4A549E92B7F08CA008CB046 /* NewTripFormView.swift */,
+			);
+			path = Trips;
+			sourceTree = "<group>";
+		};
+		B4A549F32B8047A8008CB046 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				B4A549E52B7E9FC8008CB046 /* RootView.swift */,
+			);
+			path = Root;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,13 +198,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B41536ED2B783E47008191FA /* SideMenuView.swift in Sources */,
-				B41536EF2B783F2F008191FA /* SideMenuHeaderView.swift in Sources */,
-				B41536F32B78442D008191FA /* SideMenuOptionModel.swift in Sources */,
-				B41536F12B784322008191FA /* SideMenuRowView.swift in Sources */,
-				B41536F52B784C2E008191FA /* LogoutSideMenuRowView.swift in Sources */,
-				B41536CF2B755C34008191FA /* RoutePlannerView.swift in Sources */,
+				B4A549E62B7E9FC8008CB046 /* RootView.swift in Sources */,
+				B4A549EC2B7F2B00008CB046 /* SearchMapsView.swift in Sources */,
+				B4A549EE2B803CA8008CB046 /* TripDetailView.swift in Sources */,
+				B4A549EA2B7F08CA008CB046 /* NewTripFormView.swift in Sources */,
+				B4A549E42B7E9F4D008CB046 /* ProfileView.swift in Sources */,
+				B41536CF2B755C34008191FA /* HomeView.swift in Sources */,
 				B41536CD2B755C34008191FA /* RoutePlannerApp.swift in Sources */,
+				B4A549E02B7E9ED7008CB046 /* TripsView.swift in Sources */,
+				B4A549E22B7E9F24008CB046 /* NotificationsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
