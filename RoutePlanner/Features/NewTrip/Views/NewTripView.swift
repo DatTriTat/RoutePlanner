@@ -1,5 +1,5 @@
 //
-//  NewTripFormView.swift
+//  NewTripView.swift
 //  RoutePlanner
 //
 //  Created by Khanh Chung on 2/15/24.
@@ -8,7 +8,7 @@
 import SwiftUI
 import MapKit
 
-struct NewTripFormView: View {
+struct NewTripView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var isShowing = false
     @State private var title = ""
@@ -22,7 +22,7 @@ struct NewTripFormView: View {
                     TextField("New York Trip", text: $title)
                 }
                 
-                Section(header: Text("Locations")) {
+                Section(header: Text("Places to Visit")) {
                     List {
                         ForEach(locations, id: \.self) { mapItem in
                             if let name = mapItem.name {
@@ -50,6 +50,7 @@ struct NewTripFormView: View {
                         addNewTrip(Trip(title: title, locations: locations))
                         dismiss()
                     }
+                    .disabled(title.isEmpty || locations.count == 0)
                 }
             }
         }
@@ -57,5 +58,5 @@ struct NewTripFormView: View {
 }
 
 #Preview {
-    NewTripFormView() { newTrip in }
+    NewTripView() { newTrip in }
 }

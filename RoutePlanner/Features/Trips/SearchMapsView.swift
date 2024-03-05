@@ -18,11 +18,14 @@ struct SearchMapsView: View {
     var body: some View {
         NavigationStack {
             List(searchResults, id: \.self, selection: $selection) { mapItem in
-                VStack(alignment: .leading, spacing: 4) {
-                    Text(mapItem.name ?? "Unknown")
-                    Text(mapItem.placemark.title ?? "Unknown")
-                        .font(.subheadline)
-                        .foregroundStyle(.gray)
+                HStack(spacing: 12) {
+                    Image(systemName: "mappin.and.ellipse")
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(mapItem.name ?? "Unknown")
+                        Text(mapItem.placemark.title ?? "Unknown")
+                            .font(.subheadline)
+                            .foregroundStyle(.gray)
+                    }
                 }
                 .onTapGesture {
                     selectedLocation(mapItem)
