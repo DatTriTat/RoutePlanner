@@ -14,7 +14,7 @@ struct RootView: View {
                 .tabItem { Label("Home", systemImage: "house") }
             
             TripsView()
-                .tabItem { Label("Trips", systemImage: "road.lanes") }
+                .tabItem { Label("Trips", systemImage: "mappin.and.ellipse") }
             
             NotificationsView()
                 .tabItem { Label("Notifications", systemImage: "bell") }

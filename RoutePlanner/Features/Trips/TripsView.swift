@@ -24,11 +24,12 @@ struct TripsView: View {
                     TripDetailView(trip: trip)
                 }
             }
-            .navigationTitle("Trips")
+            .navigationTitle("Trip Plans")
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     NavigationLink("New Trip") {
-                        NewTripFormView() { newTrip in
+                        NewTripView() { newTrip in
                             trips.append(newTrip)
                         }
                     }
