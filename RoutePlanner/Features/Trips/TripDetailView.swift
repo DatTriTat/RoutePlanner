@@ -1,39 +1,46 @@
-//
-//  TripDetailView.swift
-//  RoutePlanner
-//
-//  Created by Khanh Chung on 2/16/24.
-//
-
 import SwiftUI
 import MapKit
 
 struct TripDetailView: View {
-    @State var trip: Trip
+    @Binding var trip: Trip
+    @State private var showingDirectionOptions = false
+    @State private var directionsMode = MKLaunchOptionsDirectionsModeDriving
+    var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEE, MMM d, yyyy"
+        return formatter
+    }
+    var formattedDateRange: String {
+        let startDateString = dateFormatter.string(from: trip.startDate)
+        return startDateString
+    }
     
+    var mapItems: [MKMapItem] {
+        let items = convertLocationsToMapItems(locations: trip.locations)
+        print("Map Items: \(items)")
+        return items
+    }
+
     var body: some View {
         VStack {
-            MapView(locations: trip.locations)
+            MapView(locations: mapItems)
                 .frame(height: 250)
+                .environmentObject(LocationManager())
             
             VStack(alignment: .leading) {
                 VStack(alignment: .leading) {
                     Text("Places to Visit")
                         .font(.title)
                         .fontWeight(.bold)
-                    Text("Fri, Feb 16, 2024 - Thur, Feb 29, 2024")
-                        .font(.subheadline)
+                    Text(formattedDateRange)                         .font(.subheadline)
                         .foregroundStyle(.gray)
                 }
                 .padding()
                 
-                MapLocationListView(trip.locations)
-                    .listStyle(.plain)
+                locationList
                 
-                Button {
-                    openMap()
-                } label: {
-                    Label("Directions", systemImage: "arrow.triangle.turn.up.right.diamond")
+                Button("Get Directions") {
+                    showingDirectionOptions = true
                 }
                 .foregroundColor(.white)
                 .fontWeight(.semibold)
@@ -41,33 +48,84 @@ struct TripDetailView: View {
                 .background(.black)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 .padding()
-
+                .actionSheet(isPresented: $showingDirectionOptions) {
+                    ActionSheet(title: Text("Select Directions Mode"), message: Text("Choose a mode of transportation"), buttons: [
+                        .default(Text("Driving"), action: {
+                            directionsMode = MKLaunchOptionsDirectionsModeDriving
+                            openMap()
+                        }),
+                        .default(Text("Walking"), action: {
+                            directionsMode = MKLaunchOptionsDirectionsModeWalking
+                            openMap()
+                        }),
+                        .cancel()
+                    ])
+                }
             }
         }
         .navigationTitle(trip.title)
         .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            EditButton().buttonStyle(.plain)
-        }
     }
+    
+    private var locationList: some View {
+        List {
+            ForEach(mapItems.indices, id: \.self) { index in
+                
+                HStack(alignment: .top, spacing: 15) {
+                    VStack(spacing: 0) {
+                        Image(systemName: "\(index + 1).circle")
+                            .font(.title2)
+                        Rectangle()
+                            .frame(width: 2, height: 30)
+                            .foregroundStyle(.gray)
+                    }
+                    
+                    Text(mapItems[index].name!)
+                        .fontWeight(.semibold)
+                        .frame(alignment: .leading)
+                    
+                    Spacer()
+                    
+                    Button(action: {
+                        openMapToIndex(index: index)
+                    }) {
+                        Image(systemName: "location.circle.fill")
+                            .foregroundColor(.black)
+                            .font(.title2)
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                }
+            }
+            
+        }
+        .listStyle(PlainListStyle())
+        .frame(maxHeight: .infinity)
+    }
+    
+    
     
     func openMap() {
         MKMapItem.openMaps(
-            with: [MKMapItem.forCurrentLocation()] + trip.locations,
-            launchOptions: [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving])
+            with: [MKMapItem.forCurrentLocation()] + mapItems,
+            launchOptions: [MKLaunchOptionsDirectionsModeKey: directionsMode])
     }
+    func openMapToIndex(index: Int) {
+        guard index >= 0 && index < trip.locations.count else {
+            print("Index out of range: \(index)")
+            return
+        }
+        
+        let selectedLocation = mapItems[index]
+        print("Opening directions to: \(selectedLocation.name ?? "Unknown location")")
+        
+        let mapItems = [MKMapItem.forCurrentLocation(), selectedLocation]
+        MKMapItem.openMaps(
+            with: mapItems,
+            launchOptions: [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
+        )
+    }
+    
+    
+    
 }
 
-#Preview {
-    let mapItems: [MKMapItem] = [
-        MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194), addressDictionary: ["City": "San Francisco"])),
-        MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: 34.0522, longitude: -118.2437), addressDictionary: ["City": "Los Angeles"])),
-        MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: 32.7157, longitude: -117.1611), addressDictionary: ["City": "San Diego"]))
-    ]
-    
-    return NavigationStack {
-        NavigationStack {
-            TripDetailView(trip: Trip(title: "California Trip", locations: mapItems))
-        }
-    }
-}

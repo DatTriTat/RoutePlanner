@@ -2,14 +2,16 @@
 //  LoginView.swift
 //  RoutePlanner
 //
-//  Created by Khanh Chung on 2/18/24.
 //
 
 import SwiftUI
 
 struct LoginView: View {
+    @ObservedObject var viewmodel: ViewModel
     @State private var email = ""
     @State private var password = ""
+    @State private var isLoading = false
+    @State private var errorMessage: String?
     @Environment(\.colorScheme) private var colorScheme
 
     var body: some View {
@@ -41,6 +43,12 @@ struct LoginView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 10))
             }
             
+            if let errorMessage = errorMessage {
+                Text(errorMessage)
+                    .foregroundColor(.red)
+                    .padding()
+            }
+
             Text("Forgot Password?")
                 .font(.footnote)
                 .fontWeight(.semibold)
@@ -48,11 +56,21 @@ struct LoginView: View {
                 .padding(.vertical)
             
             Button {
-                
+                isLoading = true
+                viewmodel.signIn(email: email, password: password) { success in
+                    isLoading = false
+                    if !success {
+                        self.errorMessage = "Authentication failed. Check your credentials and try again."
+                    }
+                }
             } label: {
-                Text("Login")
-                    .fontWeight(.semibold)
-                    .foregroundStyle(colorScheme == .light ? .white : .black)
+                if isLoading {
+                    ProgressView()
+                } else {
+                    Text("Login")
+                        .fontWeight(.semibold)
+                        .foregroundStyle(colorScheme == .light ? .white : .black)
+                }
             }
             .frame(maxWidth: .infinity, maxHeight: 52)
             .background(colorScheme == .light ? .black : .white)
@@ -79,6 +97,8 @@ struct LoginView: View {
     }
 }
 
-#Preview {
-    LoginView()
+struct LoginView_Previews: PreviewProvider {
+    static var previews: some View {
+        LoginView(viewmodel: ViewModel())
+    }
 }

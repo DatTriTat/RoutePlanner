@@ -9,31 +9,32 @@ import SwiftUI
 import MapKit
 
 struct NewTripView: View {
-    @Environment(\.dismiss) private var dismiss
+    @Environment(\.dismiss) var dismiss
     @State private var isShowing = false
+    @State private var startDate = Date()
     @State private var title = ""
     @State private var locations: [MKMapItem] = []
-    var addNewTrip: (Trip) -> ()
+    @EnvironmentObject var viewModel: ViewModel
     
     var body: some View {
         NavigationStack {
             Form {
                 Section(header: Text("Title")) {
-                    TextField("New York Trip", text: $title)
+                    TextField("Trip Title", text: $title)
+                }
+                
+                Section(header: Text("Dates")) {
+                    DatePicker("Start Date", selection: $startDate, in: Date()..., displayedComponents: .date)
                 }
                 
                 Section(header: Text("Places to Visit")) {
-                    List {
-                        ForEach(locations, id: \.self) { mapItem in
-                            if let name = mapItem.name {
-                                Text(name)
-                            }
-                        }
+                    List(locations, id: \.self) { mapItem in
+                        Text(mapItem.name ?? "Unknown Location")
                     }
                     
-                    Button {
+                    Button(action: {
                         isShowing.toggle()
-                    } label: {
+                    }) {
                         Label("Add Stop", systemImage: "plus.circle.fill")
                     }
                     .sheet(isPresented: $isShowing) {
@@ -47,16 +48,15 @@ struct NewTripView: View {
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Save") {
-                        addNewTrip(Trip(title: title, locations: locations))
+                        let locationObjects = convertMapItemsToLocations(mapItems: locations)
+                        let newTrip = Trip(title: title, startDate: startDate, locations: locationObjects)
+                        viewModel.addTrip(trip: newTrip)
                         dismiss()
                     }
-                    .disabled(title.isEmpty || locations.count == 0)
+                    .disabled(title.isEmpty || locations.isEmpty)
                 }
             }
         }
     }
 }
 
-#Preview {
-    NewTripView() { newTrip in }
-}
