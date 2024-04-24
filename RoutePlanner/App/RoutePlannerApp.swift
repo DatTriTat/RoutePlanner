@@ -21,8 +21,10 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct RoutePlannerApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    @StateObject private var viewModel = ViewModel() // This view model manages authentication state
-    
+    @StateObject private var viewModel = ViewModel() 
+    init() {
+            NetworkMonitor.shared.startMonitoring()
+        }
     var body: some Scene {
         WindowGroup {
             NavigationView {
@@ -33,7 +35,6 @@ struct RoutePlannerApp: App {
                 }				            }
             .environmentObject(viewModel)
             .onAppear {
-                viewModel.listenToAuthenticationState()
             }
         }
     }

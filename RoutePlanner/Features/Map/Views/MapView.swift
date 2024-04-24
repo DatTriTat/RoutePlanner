@@ -94,7 +94,7 @@ struct ContentView: View {
                 locationManager.requestLocationAuthorization()
                 locationManager.startReceivingLocationChanges()
             }
-            .environmentObject(locationManager) // Ensure locationManager is injected correctly.
+            .environmentObject(locationManager) 
             .frame(height: 250)
     }
 }

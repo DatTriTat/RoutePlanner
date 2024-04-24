@@ -7,7 +7,7 @@
 
 import MapKit
 
-struct Location {
+struct Location: Hashable {
     var name: String
     var latitude: Double
     var longitude: Double

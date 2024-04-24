@@ -11,8 +11,8 @@ struct RootView: View {
     var viewModel = ViewModel()
     var body: some View {
         TabView {
-            //HomeView()
-                //.tabItem { Label("Home", systemImage: "house") }
+            HomeView()
+                .tabItem { Label("Home", systemImage: "house") }
             
             TripsView()
                 .tabItem { Label("Trips", systemImage: "mappin.and.ellipse") }
