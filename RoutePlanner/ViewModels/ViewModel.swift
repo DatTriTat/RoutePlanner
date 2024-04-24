@@ -2,6 +2,8 @@ import SwiftUI
 import Firebase
 import Combine
 import FirebaseStorage
+import LocalAuthentication
+
 class ViewModel: ObservableObject {
     @Published var isAuthenticated = false
     @Published var user: User?
@@ -10,7 +12,7 @@ class ViewModel: ObservableObject {
     private var dbRef = Database.database().reference()
     private var cancellables = Set<AnyCancellable>()
     private var authStateListenerHandle: AuthStateDidChangeListenerHandle?
-    
+
     
     init() {
         setupAuthenticationListener()
@@ -162,12 +164,20 @@ class ViewModel: ObservableObject {
             try Auth.auth().signOut()
             isAuthenticated = false
             user = nil
-            removeAuthenticationListener() // Consider removing the listener on logout
-            setupAuthenticationListener() // Re-setup if necessary
-            print("Logged out: isAuthenticated = \(isAuthenticated), user = \(String(describing: user))")
+            trips = []
+            publicTrips = []
+            removeAuthenticationListener()
+            setupAuthenticationListener()
+            clearLocalData()
+            NotificationCenter.default.post(name: NSNotification.Name("UserDidLogout"), object: nil)
         } catch let signOutError as NSError {
             print("Error signing out: \(signOutError.localizedDescription)")
         }
+    }
+    
+    private func clearLocalData() {
+        UserDefaults.standard.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
+        UserDefaults.standard.synchronize()
     }
     
     
@@ -385,4 +395,40 @@ class ViewModel: ObservableObject {
                 }
             })
     }
+    func updateTripOrder(for userId: String, with tripIds: [String]) {
+        let userTripsRef = dbRef.child("users").child(userId).child("tripIds")
+        userTripsRef.setValue(tripIds) { error, _ in
+            if let error = error {
+                print("Error updating trip order: \(error.localizedDescription)")
+            } else {
+                print("Trip order updated successfully")
+            }
+        }
+    }
+    
+    func authenticateBiometrically(completion: @escaping (Bool, String) -> Void) {
+        let context = LAContext()
+        var error: NSError?
+
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            let reason = "Confirm your identity to continue."
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
+                DispatchQueue.main.async {
+                    if success {
+                        self.isAuthenticated = true
+                        completion(true, "Authentication successful.")
+                    } else {
+                        let errorMessage = authenticationError?.localizedDescription ?? "Failed for unknown reasons."
+                        print("Authentication error: \(errorMessage)")
+                        completion(false, errorMessage)
+                    }
+                }
+            }
+        } else {
+            let errorMessage = error?.localizedDescription ?? "Biometric authentication not available."
+            print("Authentication setup error: \(errorMessage)")
+            completion(false, errorMessage)
+        }
+    }
+    
 }

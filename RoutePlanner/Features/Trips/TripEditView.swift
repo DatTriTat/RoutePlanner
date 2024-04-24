@@ -15,7 +15,9 @@ struct TripEditView: View {
     @State private var showingAlert = false
     @State private var isImagePickerShowing = false
     @State private var inputImages: [UIImage] = []
-    
+    private var ownerFullName: String {
+        [viewModel.user?.firstName, viewModel.user?.lastName].compactMap { $0 }.joined(separator: " ")
+    }
     var saveAction: (Trip) -> Void
     
     init(trip: Binding<Trip>, saveAction: @escaping (Trip) -> Void) {
@@ -30,11 +32,17 @@ struct TripEditView: View {
                 Section(header: Text("Title")) {
                     TextField("Trip Title", text: $trip.title)
                 }
+                .disabled(trip.nameOwner != ownerFullName)
+
                 DatePicker("Start Date", selection: $trip.startDate, in: currentDate()..., displayedComponents: .date)
+                    .disabled(trip.nameOwner != ownerFullName)
+
                 imageSection
                 placeToVisitSection
                 shareTripSection
-                publicPrivateSection
+                if(trip.nameOwner == ownerFullName) {
+                    publicPrivateSection
+                }
             }
             .navigationTitle("Edit Trip")
             .toolbar {
@@ -45,19 +53,32 @@ struct TripEditView: View {
             ImagePicker(images: $inputImages)
         }
         Button(action: {
-            viewModel.uploadImages(inputImages) { urls in
-                trip.pictureURLs.append(contentsOf: urls)
-                saveAction(trip)
-                originalTrip = trip
+            
+            if(trip.nameOwner == ownerFullName) {
+                viewModel.uploadImages(inputImages) { urls in
+                    trip.pictureURLs.append(contentsOf: urls)
+                    saveAction(trip)
+                    originalTrip = trip
+                }
             }
             navigate = true
         }) {
-            Text("Save and Go to Detail View")
-                .font(.headline)
-                .foregroundColor(colorScheme == .light ? .white : .black)
-                .frame(maxWidth: .infinity, maxHeight: 52)
-                .background(colorScheme == .light ? Color.black : Color.white)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
+            if(trip.nameOwner == ownerFullName) {
+                
+                Text("Save and Go to Detail View")
+                    .font(.headline)
+                    .foregroundColor(colorScheme == .light ? .white : .black)
+                    .frame(maxWidth: .infinity, maxHeight: 52)
+                    .background(colorScheme == .light ? Color.black : Color.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+            } else {
+                Text("Go to Detail View")
+                    .font(.headline)
+                    .foregroundColor(colorScheme == .light ? .white : .black)
+                    .frame(maxWidth: .infinity, maxHeight: 52)
+                    .background(colorScheme == .light ? Color.black : Color.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+            }
         }
         .padding()
         NavigationLink(
@@ -70,6 +91,7 @@ struct TripEditView: View {
     }
     
     private var publicPrivateSection: some View {
+        
         Section(header: Text("Trip Visibility")) {
             Picker("Visibility", selection: $trip.isPublic) {
                 Text("Private").tag(false)
@@ -107,8 +129,10 @@ struct TripEditView: View {
                 .frame(height: 300)
                 
             }
-            Button("Add Images") {
-                isImagePickerShowing = true
+            if(trip.nameOwner == ownerFullName) {
+                Button("Add Images") {
+                    isImagePickerShowing = true
+                }
             }
         }
     }
@@ -120,16 +144,21 @@ struct TripEditView: View {
                     Text(location.name)
                 }
                 .onDelete(perform: deleteLocation)
+                .onMove(perform: moveLocation)
+                
             }
-            Button("Add Stop") {
-                isShowing.toggle()
-            }
-            .sheet(isPresented: $isShowing) {
-                SearchMapsView(isShowing: $isShowing) { location in
-                    let lo = convertMapItemToLocation(mapItem: location)
-                    trip.locations.append(lo)
+            if(trip.nameOwner == ownerFullName) {
+                Button("Add Stop") {
+                    isShowing.toggle()
+                }
+                .sheet(isPresented: $isShowing) {
+                    SearchMapsView(isShowing: $isShowing) { location in
+                        let lo = convertMapItemToLocation(mapItem: location)
+                        trip.locations.append(lo)
+                    }
                 }
             }
+           
         }
     }
     
@@ -154,6 +183,10 @@ struct TripEditView: View {
                         trip.pictureURLs.append(contentsOf: urls)
                         saveAction(trip)
                         originalTrip = trip
+                        if let userId = viewModel.user?.id {
+                            let orderedTripIds = viewModel.trips.map { $0.id }
+                            viewModel.updateTripOrder(for: userId, with: orderedTripIds)
+                        }
                     }
                 } else {
                     showingAlert = true
@@ -167,7 +200,9 @@ struct TripEditView: View {
         }
     }
     
-    
+    private func moveLocation(from source: IndexSet, to destination: Int) {
+        trip.locations.move(fromOffsets: source, toOffset: destination)
+    }
     
     private func deleteLocation(at offsets: IndexSet) {
         trip.locations.remove(atOffsets: offsets)
@@ -191,6 +226,8 @@ struct TripEditView: View {
             }
         }
     }
+    
+    
     
     private func currentDate() -> Date {
         Date()

@@ -78,8 +78,8 @@
             filePath = "RoutePlanner/ViewModels/ViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "213"
-            endingLineNumber = "213"
+            startingLineNumber = "223"
+            endingLineNumber = "223"
             landmarkName = "updateTrip(trip:user:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,8 +94,8 @@
             filePath = "RoutePlanner/ViewModels/ViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "215"
-            endingLineNumber = "215"
+            startingLineNumber = "225"
+            endingLineNumber = "225"
             landmarkName = "updateTrip(trip:user:completion:)"
             landmarkType = "7">
             <Locations>
@@ -172,8 +172,8 @@
             filePath = "RoutePlanner/ViewModels/ViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "297"
-            endingLineNumber = "297"
+            startingLineNumber = "307"
+            endingLineNumber = "307"
             landmarkName = "deleteTrip(trip:)"
             landmarkType = "7">
             <Locations>
@@ -220,8 +220,8 @@
             filePath = "RoutePlanner/ViewModels/ViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
             landmarkName = "fetchTrips()"
             landmarkType = "7">
             <Locations>
@@ -268,8 +268,8 @@
             filePath = "RoutePlanner/ViewModels/ViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
             landmarkName = "fetchTrips()"
             landmarkType = "7">
             <Locations>
@@ -316,8 +316,8 @@
             filePath = "RoutePlanner/ViewModels/ViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
             landmarkName = "fetchTrips()"
             landmarkType = "7">
             <Locations>
@@ -394,8 +394,8 @@
             filePath = "RoutePlanner/ViewModels/ViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "fetchUserData(userID:)"
             landmarkType = "7">
             <Locations>
@@ -442,8 +442,8 @@
             filePath = "RoutePlanner/ViewModels/ViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
             landmarkName = "fetchTrips()"
             landmarkType = "7">
             <Locations>
@@ -490,8 +490,8 @@
             filePath = "RoutePlanner/ViewModels/ViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "fetchUserData(userID:)"
             landmarkType = "7">
             <Locations>
@@ -553,8 +553,8 @@
             filePath = "RoutePlanner/ViewModels/ViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "fetchUserData(userID:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -569,8 +569,8 @@
             filePath = "RoutePlanner/ViewModels/ViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
             landmarkName = "fetchTrips()"
             landmarkType = "7">
          </BreakpointContent>
@@ -585,10 +585,10 @@
             filePath = "RoutePlanner/ViewModels/ViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "signIn(email:password:completion:)"
-            landmarkType = "7">
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "ViewModel"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -601,10 +601,10 @@
             filePath = "RoutePlanner/ViewModels/ViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "ViewModel"
-            landmarkType = "3">
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "signIn(email:password:completion:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -617,8 +617,8 @@
             filePath = "RoutePlanner/ViewModels/ViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "signIn(email:password:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -633,10 +633,10 @@
             filePath = "RoutePlanner/ViewModels/ViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "removeAuthenticationListener()"
-            landmarkType = "7">
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "ViewModel"
+            landmarkType = "3">
             <Locations>
                <Location
                   uuid = "AAB6A36F-F7C7-4A2B-A52F-062AB047747E - 7eeb9d7e63343c2e"
@@ -681,8 +681,8 @@
             filePath = "RoutePlanner/ViewModels/ViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "removeAuthenticationListener()"
             landmarkType = "7">
             <Locations>
@@ -1317,8 +1317,8 @@
             filePath = "RoutePlanner/ViewModels/ViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
             landmarkName = "setupAuthenticationListener()"
             landmarkType = "7">
             <Locations>
@@ -1365,8 +1365,8 @@
             filePath = "RoutePlanner/ViewModels/ViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
             landmarkName = "setupAuthenticationListener()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1381,10 +1381,249 @@
             filePath = "RoutePlanner/Features/Trips/TripEditView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "163"
-            endingLineNumber = "163"
+            startingLineNumber = "196"
+            endingLineNumber = "196"
             landmarkName = "saveToolbarItem"
             landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1C4AD14A-5DBF-429B-B51E-5091279C4E18"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RoutePlanner/Features/Trips/TripEditView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "1C4AD14A-5DBF-429B-B51E-5091279C4E18 - 82be744637513697"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 () -&gt; () in RoutePlanner.TripEditView.body.getter : some"
+                  moduleName = "RoutePlanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tritat/Desktop/RoutePlanner/RoutePlanner/Features/Trips/TripEditView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "372">
+               </Location>
+               <Location
+                  uuid = "1C4AD14A-5DBF-429B-B51E-5091279C4E18 - db0444399cde6e58"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.String&gt;) -&gt; Swift.Optional&lt;Swift.String&gt; in closure #3 () -&gt; () in RoutePlanner.TripEditView.body.getter : some"
+                  moduleName = "RoutePlanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tritat/Desktop/RoutePlanner/RoutePlanner/Features/Trips/TripEditView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "56B54CF4-252D-4CC6-B14F-2E9CBC68EADF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RoutePlanner/Features/Trips/TripEditView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0BC1B474-0B5B-431A-9E3A-0DEDBC15942E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RoutePlanner/Features/Trips/TripEditView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4DE1C220-5E96-425E-AECC-D7826BD107FB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RoutePlanner/Features/Trips/TripEditView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "4DE1C220-5E96-425E-AECC-D7826BD107FB - 82be74463751317e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 () -&gt; () in RoutePlanner.TripEditView.body.getter : some"
+                  moduleName = "RoutePlanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tritat/Desktop/RoutePlanner/RoutePlanner/Features/Trips/TripEditView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "1724">
+               </Location>
+               <Location
+                  uuid = "4DE1C220-5E96-425E-AECC-D7826BD107FB - 5060fa121e432ec2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.clipShape&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.Shape&gt;(_: &#x3c4;_1_0, style: SwiftUI.FillStyle) -&gt; some&gt;&gt;.0 in RoutePlanner.TripEditView.body.getter : some"
+                  moduleName = "RoutePlanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tritat/Desktop/RoutePlanner/RoutePlanner/Features/Trips/TripEditView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "532">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C434A0CC-39AF-4DEC-9EEF-5EA856430987"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RoutePlanner/ViewModels/ViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "409"
+            endingLineNumber = "409"
+            landmarkName = "ViewModel"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "C434A0CC-39AF-4DEC-9EEF-5EA856430987 - bcd1b9804eb27ae9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RoutePlanner.ViewModel.authenticateBiometrically(completion: (Swift.Bool, Swift.String) -&gt; ()) -&gt; ()"
+                  moduleName = "RoutePlanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tritat/Desktop/RoutePlanner/RoutePlanner/ViewModels/ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "410"
+                  endingLineNumber = "410"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "C434A0CC-39AF-4DEC-9EEF-5EA856430987 - bcd1b9804eb27ae9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RoutePlanner.ViewModel.authenticateBiometrically(completion: (Swift.Bool, Swift.String) -&gt; ()) -&gt; ()"
+                  moduleName = "RoutePlanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tritat/Desktop/RoutePlanner/RoutePlanner/ViewModels/ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "410"
+                  endingLineNumber = "410"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "C434A0CC-39AF-4DEC-9EEF-5EA856430987 - bcd1b9804eb27ae9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RoutePlanner.ViewModel.authenticateBiometrically(completion: (Swift.Bool, Swift.String) -&gt; ()) -&gt; ()"
+                  moduleName = "RoutePlanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tritat/Desktop/RoutePlanner/RoutePlanner/ViewModels/ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "410"
+                  endingLineNumber = "410"
+                  offsetFromSymbolStart = "104">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A30B009A-5A0A-43DA-8261-8A2A7E6267A9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RoutePlanner/ViewModels/ViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "432"
+            endingLineNumber = "432"
+            landmarkName = "authenticateBiometrically(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A30B009A-5A0A-43DA-8261-8A2A7E6267A9 - bcd1b9804eb279b4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RoutePlanner.ViewModel.authenticateBiometrically(completion: (Swift.Bool, Swift.String) -&gt; ()) -&gt; ()"
+                  moduleName = "RoutePlanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tritat/Desktop/RoutePlanner/RoutePlanner/ViewModels/ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "431"
+                  endingLineNumber = "431"
+                  offsetFromSymbolStart = "1188">
+               </Location>
+               <Location
+                  uuid = "A30B009A-5A0A-43DA-8261-8A2A7E6267A9 - bcd1b9804eb279b4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RoutePlanner.ViewModel.authenticateBiometrically(completion: (Swift.Bool, Swift.String) -&gt; ()) -&gt; ()"
+                  moduleName = "RoutePlanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tritat/Desktop/RoutePlanner/RoutePlanner/ViewModels/ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "431"
+                  endingLineNumber = "431"
+                  offsetFromSymbolStart = "1208">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
